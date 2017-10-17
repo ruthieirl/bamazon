@@ -1,5 +1,7 @@
+/*use the database called bamazon*/
 USE bamazon;
 
+/*fill in the table named products with the information below*/
 INSERT INTO products 
 	(product_name, department_name, price, stock_quantity)
 VALUES
@@ -10,6 +12,6 @@ VALUES
 	("Cantu Shea Butter Leave-In Conditioner", "health & beauty", 21.99, 17),
 	("Ouidad Featherlight Styling Creme", "health & beauty", 26.00, 29),
 	("TiGi Catwalk Curls Rock Amplifier", "health & beauty", 18.29, 48),
-	("Renpure Cocnut Creme Curling Jelly Gel", "health & beauty", 9.49, 66),
+	("Renpure Coconut Creme Curling Jelly Gel", "health & beauty", 9.49, 66),
 	("Devacurl No-Poo and One Conditioner Set", "health & beauty", 53.00, 57),
-	("Mixed Chicks Leave-In Conditioner", "health & beauty" 17.08, 44);
+	("Mixed Chicks Leave-In Conditioner", "health & beauty", 17.08, 44);

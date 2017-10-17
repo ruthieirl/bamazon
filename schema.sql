@@ -20,7 +20,7 @@ CREATE TABLE products(
 	department_name VARCHAR(255) NOT NULL,
 
 	/*cost to customer*/
-	price INT(11) DECIMAL(10,2) NOT NULL,
+	price DECIMAL(10,2) NOT NULL,
 
 	/*how many of the product is available in the store*/
 	stock_quantity INT(11) NOT NULL,
