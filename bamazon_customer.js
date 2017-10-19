@@ -38,3 +38,19 @@ function start() {
 		})
 		selectProduct();
 	};
+
+//user will be prompted to choose a product by id
+function selectProduct() {
+	connection.query("SELECT * FROM products",
+		function(err, results) {
+			if (err) throw err;
+			inquirer
+				.prompt({
+					name: "productNum",
+					type: "userInput",
+					message: "What is the id number of the product you would like to purchase?"
+				}).then(function(answer) {
+					
+				})
+		})
+}
