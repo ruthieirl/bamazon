@@ -62,20 +62,48 @@ function selectProduct() {
                     type: "input",
                     message: "How many units of that product would you like to buy?",
                     validate: function(value){
-                    	if (!isNAN(value)){
+                    	if (!isNaN(value)){
                     		return true;
                     	}
-                    	return false;
+                    	return true;
                     }
 
                 }
 				]).then(function(answer) {
 				
-					var itemID = answer.productID;
-					console.log(itemID);
+					var item = answer.productID;
+					//console.log(item);
 
 					var itemAmount = answer.amount;
-					console.log(itemAmount);	
+					//console.log(itemAmount);
+					console.log("You want to buy " + itemAmount + " of product number " + item +".");
+
+					connection.query("SELECT * FROM products WHERE ?", 
+						[
+						{item_id : item}
+						], 
+						function(err, res) {
+						if (err) throw err;
+
+						console.log(res);
+
+						var inStock = res[0].stock_quantity;
+						var price = res[0].price;
+						var remainingInStock = inStock - itemAmount;
+						console.log(remainingInStock);
+
+						if (inStock > itemAmount) {
+							connection.query("UPDATE products SET ? WHERE ?"),
+							[
+							{stock_quantity : remainingInStock}, {item_id : item}
+							],
+							function(err, res) {
+								if (err) throw err;
+
+								console.log("Stock quantity updated.")
+							}
+						}
+					})	
 				})
 		})
 }
