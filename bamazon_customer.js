@@ -85,25 +85,33 @@ function selectProduct() {
 						function(err, res) {
 						if (err) throw err;
 
-						console.log(res);
+						//console.log(res);
 
 						var inStock = res[0].stock_quantity;
 						var price = res[0].price;
 						var remainingInStock = inStock - itemAmount;
-						console.log(remainingInStock);
+						var grandTotal = price * itemAmount;
+						console.log("Remaining in stock: " + remainingInStock);
+						console.log("Your total is " + grandTotal);
+						console.log("Thank you for shopping Bamazon.")
 
-						if (inStock > itemAmount) {
-							connection.query("UPDATE products SET ? WHERE ?"),
-							[
-							{stock_quantity : remainingInStock}, {item_id : item}
-							],
-							function(err, res) {
-								if (err) throw err;
+						// if (inStock > itemAmount) {
+						// 	connection.query("UPDATE products SET ? WHERE ?"),
+						// 	[
+						// 	{stock_quantity : remainingInStock}, {item_id : item}
+						// 	],
+						// 	function(err, res) {
+						// 		if (err) throw err;
 
-								console.log("Stock quantity updated.")
-							}
-						}
+						// 		console.log("Stock quantity updated.")
+						// 	}
+						// }
+						endBamazon();
 					})	
 				})
 		})
-}
+};
+
+function endBamazon() {
+	connection.end();
+};
