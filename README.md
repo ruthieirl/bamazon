@@ -8,15 +8,15 @@ This activity is an Amazon-like storefront called Bamazon.  The user is greeted 
 
 The user is prompted to enter the ID number of the product they want to buy.
 
-![alt text] (https://github.com/ruthieirl/bamazon/blob/master/images/screen2.PNG)
+![alt text](https://github.com/ruthieirl/bamazon/blob/master/images/screen2.PNG)
 
 Then the user is prompted to enter the amount of product that they want.
 
-![alt text] (https://github.com/ruthieirl/bamazon/blob/master/images/screen3.PNG)
+![alt text](https://github.com/ruthieirl/bamazon/blob/master/images/screen3.PNG)
 
 The app checks to see if enough of the item is in stock and provides a total before thanking the customer for their purchase and disconnecting.
 
-![alt text] (https://github.com/ruthieirl/bamazon/blob/master/images/complete.PNG)
+![alt text](https://github.com/ruthieirl/bamazon/blob/master/images/complete.PNG)
 
 
  
