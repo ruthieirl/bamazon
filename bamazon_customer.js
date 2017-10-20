@@ -45,12 +45,37 @@ function selectProduct() {
 		function(err, results) {
 			if (err) throw err;
 			inquirer
-				.prompt({
-					name: "productNum",
+				.prompt([
+				{
+					name: "productID",
 					type: "userInput",
-					message: "What is the id number of the product you would like to purchase?"
-				}).then(function(answer) {
-					
+					message: "What is the id number of the product you would like to purchase?",
+					validate: function(value){
+                    	if (!isNaN(value)){
+                    		return true;
+                    	}
+                    	return false;
+                    }
+				},
+				{
+                    name: "amount",
+                    type: "input",
+                    message: "How many units of that product would you like to buy?",
+                    validate: function(value){
+                    	if (!isNAN(value)){
+                    		return true;
+                    	}
+                    	return false;
+                    }
+
+                }
+				]).then(function(answer) {
+				
+					var itemID = answer.productID;
+					console.log(itemID);
+
+					var itemAmount = answer.amount;
+					console.log(itemAmount);	
 				})
 		})
 }
