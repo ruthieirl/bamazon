@@ -1,8 +1,19 @@
-# bamazon
+-----------------------------------------
+# Bamazon
 
-## Node.js & MySQL
+#### Node.js * MySQL
 
-This activity is an Amazon-like storefront called Bamazon.  The user is greeted and a list of available inventory is displayed.  
+
+-----------------------------------------
+
+
+## What is it?
+
+This application is an Amazon-like storefront called Bamazon.  The application is run using Node and MySQL.  There is no front-end.
+
+## How To Use
+
+The user is greeted and a list of available inventory is displayed.  
 
 ![alt text](https://github.com/ruthieirl/bamazon/blob/master/images/screen1.PNG)
 
@@ -18,5 +29,6 @@ The app checks to see if enough of the item is in stock and provides a total bef
 
 ![alt text](https://github.com/ruthieirl/bamazon/blob/master/images/complete.PNG)
 
+- - -
 
- 
+Ruthie Campiz © 2017 All Rights Reserved
